@@ -22,7 +22,7 @@
         <div id="modal-content">
             <div class="flex justify-between px-6 pt-6">
                 <h1 class="text-2xl font-bold ibm-plex-sans">Create Account</h1>
-                <span class="text-[#3D3D3D] text-xs">
+                <span class="hidden md:inline text-[#3D3D3D] text-xs">
                     Already have an account?
                     <button id="sign-in-btn" class="text-primaryBlue cursor-pointer font-semibold">Sign in</button>
                 </span>
@@ -30,7 +30,7 @@
                     <i class="fa-solid fa-circle-xmark"></i>
                 </button>
             </div>
-            <figure class="grid grid-cols-2">
+            <figure class="grid grid-cols-1 md:grid-cols-2">
                 <form class="p-6 flex flex-col gap-4">
                     <div class="grid grid-rows-4 border-[#D9D9DB] border-[1px]">
                         <div class="grid grid-cols-2">
@@ -57,21 +57,21 @@
                     <div class="flex flex-col gap-2">
 
                         <button class="text-sm py-2 justify-center gap-2 flex items-center border-[#D9D9DB] border-2">
-                            <img src="./assets//icons/fb.svg" />sign up with Facebook
+                            <img src="./assets/icons/fb.svg" />sign up with Facebook
                         </button>
                         <button class="text-sm py-2 justify-center gap-2 flex items-center border-[#D9D9DB] border-2">
-                            <img src="./assets//icons/google.svg" />sign up with Google
+                            <img src="./assets/icons/google.svg" />sign up with Google
                         </button>
                     </div>
                 </form>
-                <div>
+                <div class="hidden md:block">
                     <img src="./assets/login-modal-image.png" />
                     <p class="text-[#888888] text-[.6rem]">By signing up, you agree to our Terms & conditions, Privacy
                         policy</p>
                 </div>
             </figure>
         </div>
-        <button id="close-modal" class="absolute top-2 right-2 z-10 bg-transparent size-6 rounded-full">
+        <button id="close-modal" class="hidden md:block md:absolute top-2 right-2 z-10 bg-transparent size-6 rounded-full">
             <i class="fa-solid fa-circle-xmark text-[#676767]"></i>
         </button>
     </dialog>
