@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <script src="js/scripts.js" async></script>
+</head>
+
+<body class="">
+
+    <!-- dailog for sign up -->
+    <dialog data-label='signup' class="w-[670px] outline-none relative  rounded-lg backdrop:bg-[#000000a1]">
+        <div class="hidden md:block bg-[#EFFFF4] py-4 text-center px-auto">
+            <p class="text-[#008A45] text-sm">Let's learn, share & inspire each other with our passion for computer
+                engineering. Sign up now 🤘🏼
+            </p>
+        </div>
+        <div id="modal-content">
+            <div class="flex justify-between px-6 pt-6">
+                <h1 class="text-2xl font-bold ibm-plex-sans">Create Account</h1>
+                <span class="text-[#3D3D3D] text-xs">
+                    Already have an account?
+                    <button id="sign-in-btn" class="text-primaryBlue cursor-pointer font-semibold">Sign in</button>
+                </span>
+                <button class="md:hidden text-[#212529]">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+            <figure class="grid grid-cols-2">
+                <form class="p-6 flex flex-col gap-4">
+                    <div class="grid grid-rows-4 border-[#D9D9DB] border-[1px]">
+                        <div class="grid grid-cols-2">
+                            <input class="bg-[#F7F8FA] border-[#D9D9DB] border-b-[1px] outline-none px-2 py-2"
+                                type="text" placeholder="First Name">
+                            <input
+                                class="bg-[#F7F8FA] border-[#D9D9DB] border-b-[1px] border-l-[1px]  outline-none px-2 py-2"
+                                type="text" placeholder="Last Name">
+                        </div>
+                        <input class="bg-[#F7F8FA] border-[#D9D9DB] border-b-[1px] outline-none px-2 py-2" type="email"
+                            placeholder="Email">
+                        <input class="bg-[#F7F8FA] border-[#D9D9DB] border-b-[1px] outline-none px-2 py-2"
+                            type="password" placeholder="password">
+                        <input class="bg-[#F7F8FA] outline-none px-2 py-2" type="text" placeholder="conform password">
+                    </div>
+                    <div class="flex justify-between">
+                        <button class="bg-primaryBlue rounded-full md:w-full text-center px-8 text-white py-2 text-sm">
+                            create account
+                        </button>
+                        <button id="sign-in-btn" class="text-[#212529] md:hidden font-semibold underline">
+                            or sign in
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-2">
+
+                        <button class="text-sm py-2 justify-center gap-2 flex items-center border-[#D9D9DB] border-2">
+                            <img src="./assets//icons/fb.svg" />sign up with Facebook
+                        </button>
+                        <button class="text-sm py-2 justify-center gap-2 flex items-center border-[#D9D9DB] border-2">
+                            <img src="./assets//icons/google.svg" />sign up with Google
+                        </button>
+                    </div>
+                </form>
+                <div>
+                    <img src="./assets/login-modal-image.png" />
+                    <p class="text-[#888888] text-[.6rem]">By signing up, you agree to our Terms & conditions, Privacy
+                        policy</p>
+                </div>
+            </figure>
+        </div>
+        <button id="close-modal" class="absolute top-2 right-2 z-10 bg-transparent size-6 rounded-full">
+            <i class="fa-solid fa-circle-xmark text-[#676767]"></i>
+        </button>
+    </dialog>
+
+    <!-- doilog for sign in -->
+    <dialog data-label="signin" class="outline-none relative w-[670px] rounded-lg backdrop:bg-[#000000a1]">
+        <div class="hidden md:block bg-[#EFFFF4] py-4 text-center px-auto">
+            <p class="text-[#008A45] text-sm">Let's learn, share & inspire each other with our passion for computer
+                engineering. Sign up now 🤘🏼
+            </p>
+        </div>
+        <div id="modal-content">
+            <div class="flex justify-between px-6 pt-6">
+                <h1 class="text-2xl font-bold ibm-plex-sans">Sing In</h1>
+                <span class="hidden md:inline text-[#3D3D3D] text-xs">
+                    Dont have an account yet?
+                    <a id="sign-up-btn" class="text-primaryBlue cursor-pointer font-semibold">Create new for free!</a>
+                </span>
+                <button class="md:hidden text-[#212529]" id="close-modal">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+            </div>
+            <figure class="grid md:grid-cols-2 grid-cols-1">
+                <form class="p-6 flex flex-col gap-4">
+                    <div class="grid grid-rows-2 border-[#D9D9DB] border-[1px]">
+                        <input class="bg-[#F7F8FA] border-[#D9D9DB] border-b-[1px] outline-none px-2 py-2" type="email"
+                            placeholder="Email">
+                        <input class="bg-[#F7F8FA] outline-none px-2 py-2" type="password" placeholder="password">
+                    </div>
+                    <div class="flex justify-between">
+                        <a href = "./loggedin.html" class="bg-primaryBlue md:w-full text-center rounded-full px-8 text-white py-2 text-sm">
+                            Sign In
+                        </a>
+                        <button id="sign-up-btn" class="text-[#212529] md:hidden font-semibold underline">
+                            or create account
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <button class="text-sm py-2 justify-center gap-2 flex items-center border-[#D9D9DB] border-2">
+                            <img src="./assets//icons/fb.svg" />sign in with Facebook
+                        </button>
+                        <button class="text-sm py-2 justify-center gap-2 flex items-center border-[#D9D9DB] border-2">
+                            <img src="./assets//icons/google.svg" />sign in with Google
+                        </button>
+                        <button class="text-sm font-semibold">Forgot Password?</button>
+                    </div>
+                </form>
+                <div class="hidden md:block">
+                    <img src="./assets/login-modal-image.png" />
+                </div>
+            </figure>
+        </div>
+        <button id="close-modal" class="hidden md:block absolute top-2 right-2 z-10 bg-transparent size-6 rounded-full">
+            <i class="fa-solid fa-circle-xmark text-[#676767]"></i>
+        </button>
+    </dialog>
+
+    <!-- header section -->
+    <section>
+        <header class="hidden md:flex container  py-3 px-12 justify-between items-center">
+            <img src="./assets/logo.svg" class="h-[15px] " />
+            <div class="flex bg-[#F2F2F2] items-center gap-4 w-fit text-[#5C5C5C] p-2 rounded-full">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    class="border-none font-semibold w-[260px] text-[.7rem] bg-transparent outline-none placeholder:text-[#5C5C5C]"
+                    type="text" placeholder="search for you favourites groups in ATG">
+            </div>
+            <button id="open-modal" class="text-xs font-semibold flex justify-center items-center">
+                Create account. <span class="text-primaryBlue font-bold">Its free</span>
+            </button>
+        </header>
+    </section>
+
+    <!-- hero section -->
+    <section class="relative hero bg-cover bg-center justify-center bg-no-repeat flex">
+        <div
+            class="container h-[400px] box-border px-2 px:px-8 md:px-20 lg:px-32 xl:px-44 py-14 flex flex-col  text-white  ">
+            <div class="flex md:hidden text-white z-10 justify-between w-full">
+                <button class="cursor-pointer">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button id="group-button" class="phone-group-btn text-nowrap border-white border-2 p-2 rounded-lg">
+                    Join Group
+                </button>
+            </div>
+            <span class="z-10 ibm-plex-sans font-bold text-3xl mt-auto">
+                Computer Engineering
+            </span>
+            <span class="z-10 ibm-plex-sans font-extralight">
+                142,765 Computer Engineers follow this
+            </span>
+        </div>
+    </section>
+
+    <!-- article post section -->
+    <section>
+        <div class="container px-2 px:px-8 md:px-20 lg:px-32 xl:px-44 py-8">
+
+            <!-- tabs about, post -->
+            <nav class="hidden md:flex border-b-2 outline-[#E0E0E0] justify-between  items-center">
+                <div class="inline-flex gap-6 py-4 font-normal text-sm">
+                    <span class="text-black font-semibold">All Posts(32)</span>
+                    <span class="text-[#8A8A8A]">Article</span>
+                    <span class="text-[#8A8A8A]">Event</span>
+                    <span class="text-[#8A8A8A]">Education</span>
+                    <span class="text-[#8A8A8A]">Job</span>
+                </div>
+                <div class="gap-4 hidden lg:flex">
+                    <button
+                        class="bg-[#EDEEF0] items-center font-semibold px-3 py-2 flex rounded-md text-sm gap-4">Write a
+                        Post<i class="fa-solid fa-caret-down"></i>
+                    </button>
+
+                    <button id="group-button"
+                        class="bg-primaryBlue items-center flex px-3 py-2  text-sm gap-2 rounded-md text-white">
+                        <i class="fa-solid fa-user-plus"></i>Join Group
+                    </button>
+                </div>
+            </nav>
+
+            <!-- nav for mobile -->
+            <nav class="md:hidden flex justify-between px-4 items-center">
+                <span class="font-bold">Posts(386)</span>
+                <button class="bg-[#F1F3F5] text-[#36393b] flex items-center p-2 rounded-md gap-4">
+                    Filter: All
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+            </nav>
+
+            <div class="flex py-8 justify-between">
+                <!-- article wraper -->
+                <div class="w-full lg:w-[400px] xl:w-[600px] flex flex-col gap-3">
+                    <!-- 1st post  -->
+                    <article class="flex flex-col border rounded-lg w-full overflow-hidden">
+                        <img src="/assets/acticles/article1.png" class="w-full h-[200px]" />
+                        <div class="px-4 py-2 flex flex-col gap-4">
+                            <span class="font-semibold">✍️ Article</span>
+                            <div class="flex justify-between">
+                                <h1 class="font-bold ibm-plex-sans text-xl">What if famous brands had regular fonts?
+                                    Meet<br />RegulaBrands!</h1>
+                                <button class="hover:bg-[#BFBFC0] px-4 self-start py-2 rounded-md">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <p class="text-[#5C5C5C] text-base">I’ve worked in UX for the better part of a decade. From
+                                now on, I plan to rei…</p>
+                            <div class="flex gap-4 items-center">
+                                <img src="assets/users/user1.png" />
+                                <div class="flex flex-col md:flex-row grow md:items-center">
+                                    <span class="text-lg font-bold">Sarthak Kamra</span>
+                                    <span class="md:ml-auto mr-4 text-[#5C5C5C] text-sm font-semibold">
+                                        <span class="hidden md:inline">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </span>
+                                        1.4k views
+                                    </span>
+                                </div>
+                                <button
+                                    class="w-fit md:size-8 ml-auto md:ml-0 flex items-center justify-center rounded-md px-4 py-2 gap-1 bg-[#EDEEF0] text-[#2D2D2D]">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span class="md:hidden">share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2nd post -->
+                    <article class="flex flex-col border rounded-lg w-full overflow-hidden">
+                        <img src="/assets/acticles/article2.png" class="w-full h-[200px] object-cover" />
+                        <div class="px-4 py-2 flex flex-col gap-4">
+                            <span class="font-semibold">🔬️ Education</span>
+                            <div class="flex justify-between">
+                                <h1 class="font-bold ibm-plex-sans text-xl">Tax Benefits for Investment under National
+                                    Pension<br>Scheme launched by Government</h1>
+                                <button class="hover:bg-[#BFBFC0] px-4 self-start py-2 rounded-md">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <p class="text-[#5C5C5C] text-base">I’ve worked in UX for the better part of a decade. From
+                                now on, I plan to rei…</p>
+                            <div class="flex gap-4 items-center">
+                                <img src="assets/users/user2.png" />
+                                <div class="flex flex-col md:flex-row grow md:items-center">
+                                    <span class="text-lg font-bold">Sarah West</span>
+                                    <span class="md:ml-auto mr-4 text-[#5C5C5C] text-sm font-semibold">
+                                        <span class="hidden md:inline">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </span>
+                                        1.4k views
+                                    </span>
+                                </div>
+                                <button
+                                    class="w-fit md:size-8 ml-auto md:ml-0 flex items-center justify-center rounded-md px-4 py-2 gap-1 bg-[#EDEEF0] text-[#2D2D2D]">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span class="md:hidden">share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- 3rd post -->
+                    <article class="flex flex-col border rounded-lg w-full overflow-hidden ">
+                        <img src="/assets/acticles/article3.png" class="w-full h-[200px] object-cover" />
+                        <div class="px-4 py-2 gap-2 flex flex-col">
+                            <span class="font-semibold">🗓️ Meetup</span>
+                            <div class="flex justify-between">
+                                <h1 class="font-bold ibm-plex-sans text-xl">Finance & Investment Elite Social Mixer
+                                    @Lujiazui</h1>
+                                <button class="hover:bg-[#BFBFC0] px-4 self-start py-2 rounded-md">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <div class="flex gap-14">
+                                <span class="flex items-center gap-1 font-semibold text-sm"><i
+                                        class="fa-solid fa-calendar"></i>Fri, 12 Oct, 2018</span>
+                                <span class="flex items-center gap-1 font-semibold text-sm"><i
+                                        class="fa-solid fa-location-dot"></i>Ahmedabad, India</span>
+                            </div>
+                            <button
+                                class="border mt-2 border-[#A9AEB8] text-xs rounded-lg py-2 font-semibold text-[#E56135]">
+                                Visit Website
+                            </button>
+                            <div class="flex gap-4 items-center">
+                                <img src="assets/users/user3.png" />
+                                <div class="flex flex-col md:flex-row grow md:items-center">
+                                    <span class="text-lg font-bold">Ronal Jones</span>
+                                    <span class="md:ml-auto mr-4 text-[#5C5C5C] text-sm font-semibold">
+                                        <span class="hidden md:inline">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </span>
+                                        1.4k views
+                                    </span>
+                                </div>
+                                <button
+                                    class="w-fit md:size-8 ml-auto md:ml-0 flex items-center justify-center rounded-md px-4 py-2 gap-1 bg-[#EDEEF0] text-[#2D2D2D]">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span class="md:hidden">share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- article 4 -->
+                    <article class="flex flex-col border rounded-lg w-full overflow-hidden">
+                        <div class="px-4 py-2 gap-2 flex flex-col">
+                            <span class="font-semibold">💼️ Job</span>
+                            <div class="flex justify-between">
+                                <h1 class="font-bold ibm-plex-sans text-xl">Software Developer</h1>
+                                <button class="hover:bg-[#BFBFC0] px-4 self-start py-2 rounded-md">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </button>
+                            </div>
+                            <div class="flex gap-14">
+                                <span class="flex items-center gap-1 font-semibold text-sm"><i
+                                        class="fa-solid fa-suitcase"></i>Innovaccer Analytics Private Ltd.</span>
+                                <span class="flex items-center gap-1 font-semibold text-sm"><i
+                                        class="fa-solid fa-location-dot"></i>Noida, India</span>
+                            </div>
+                            <button
+                                class="border mt-2 border-[#A9AEB8] text-xs rounded-lg py-2 font-semibold text-[#02B875]">
+                                Apply on Timesjobs
+                            </button>
+                            <div class="flex gap-4 items-center">
+                                <img src="assets/users/user4.png" />
+                                <div class="flex flex-col md:flex-row grow md:items-center">
+                                    <span class="text-lg font-bold">Joseph Gray</span>
+                                    <span class="md:ml-auto mr-4 text-[#5C5C5C] text-sm font-semibold">
+                                        <span class="hidden md:inline">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </span>
+                                        1.4k views
+                                    </span>
+                                </div>
+                                <button
+                                    class="w-fit md:size-8 ml-auto md:ml-0 flex items-center justify-center rounded-md px-4 py-2 gap-1 bg-[#EDEEF0] text-[#2D2D2D]">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span class="md:hidden">share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- side section for pc,  -->
+                <div class="hidden lg:flex flex-col gap-2">
+                    <div class="text-sm flex gap-2 border-[#ebebeb] border-b-2 py-3 items-center h-fit">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Noida, India</span>
+                        <i class="ml-auto fa-solid fa-pencil"></i>
+                    </div>
+                    <div class="flex items-start gap-2 text-[#808080]">
+                        <i class="fa-solid fa-circle-info mt-0 text-sm"></i>
+                        <p class="text-[.6rem]">Your location will help us serve better<br>and extend a personalised
+                            experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- edit button -->
+    <button
+        class="text-white rounded-full size-[40px] fixed top-[98dvh] translate-y-[-100%] right-8 bg-gradient-to-t from-[#F0568A] to-[#FF5C5C]">
+        <i class="fa-solid fa-pencil"></i>
+    </button>
+</body>
+<script src="https://kit.fontawesome.com/897c2f2548.js" crossorigin="anonymous"></script>
+
+</html>
